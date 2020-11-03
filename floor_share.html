@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Floor Share</title>
+</head>
+<body>
+	<h3>Buying Power</h3>
+	<input type="text" id="buyPower" onkeyup="myFunction()">
+	<h3>Stock Price</h3>
+	<input type="text" id="stockPrice" onkeyup="myFunction()">
+
+	<br/><br/><br/>
+	<div id="output"></div>
+	
+	<script type="text/javascript">
+	function myFunction() {
+		var buyPower = document.getElementById('buyPower').value;
+		var stockPrice = document.getElementById('stockPrice').value;
+
+		var RealDiv;
+
+		if (stockPrice < 3) {
+			realDiv = buyPower / stockPrice / 2;
+		}
+
+		else if (stockPrice >= 3) {
+			var realDiv = buyPower / stockPrice;
+		}
+
+		var divFloor = Math.floor(realDiv/100)*100
+		var roundPrice = stockPrice * divFloor
+
+		var output = document.getElementById('output');
+
+
+
+		output.innerHTML = 'Max Shares: ' + realDiv + '<br/>Floor Shares: ' + divFloor + '<br/>Floored Buying Power: ' + roundPrice;
+	}	
+	</script>
+</body>
+</html>
