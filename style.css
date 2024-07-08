@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    /* catppuccin mocha theme */
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --blue: #89b4fa;
+    --green: #a6e3a1;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+}
+
+body {
+    background: var(--base);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#navbar {
+    display: flex;
+    padding-top: 1.5em;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5em;
+    height: 3em;
+    width: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#links li {
+    height: 100%;
+}
+
+.link {
+    height: 100%;
+}
+
+main {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+}
+
+.section {
+    width: 100%;
+    padding: 1rem;
+}
+
+#profile-pic {
+    width: 20em;
+    height: 20em;
+    border-radius: 10rem;
+}
+
+#me-desc {
+    padding: 4em;
+    padding-top: 6em;
+}
+
+h1 {
+    color: var(--text);
+    font-size: 200%;
+    text-align: center;
+    font-size: 36px;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cult-title {
+    color: var(--red);
+}
+
+#cults {
+    padding-left: 20em;
+    padding-right: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cult-item {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    align-items: center;
+    padding: 3em;
+}
+
+.cult-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#neovim-title {
+    color: var(--green);
+}
+
+#arch-title {
+    color: var(--blue);
+}
+
+a {
+    color: var(--mauve);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.cult-img {
+    width: 10em;
+    height: auto;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.cult-desc {
+    color: var(--subtext1);
+    font-size: 1.15em;
+}
+
+.discord-popup {
+    position: absolute;
+}

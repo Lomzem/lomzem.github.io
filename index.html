@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lawjay's Cool Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar" class="section">
+        <ul id="links">
+            <li>
+                <a href="https://lomzem.github.io/blackjack">
+                    <img class="link" src="assets/card_back.svg">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Lomzem">
+                    <img class="link" src="assets/github-icon.svg">
+                </a>
+            </li>
+            <li>
+                <img class="link" src="assets/discord-icon.svg"
+                    onmousedown="navigator.clipboard.writeText('Lomzem#8920');">
+                <!-- <span class="discord-popup">Copied Discord ID to clipboard!</span> -->
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div id="welcome" class="section">
+            <img id="profile-pic" src="assets/profile-pic.jpg">
+            <div id="me-desc">
+                <h1>Welcome to my site!</h1>
+                <h1>I'm Lawjay!</h1>
+            </div>
+        </div>
+        <div class="section" id="cults-wrapper">
+            <h1 id="cult-title">Cults I'm In</h1>
+            <div id="cults">
+                <div id="neovim" class="cult-item">
+                    <img src="assets/neovim-icon.svg" class="cult-img">
+                    <div class="cult-info">
+                        <h2 id="neovim-title" class="title">Neovim</h2>
+                        <p class="cult-desc">I learned about Neovim from <a
+                                href="https://www.youtube.com/c/theprimeagen">ThePrimeagen</a>, a programming
+                            YouTuber and streamer. I first learned the Vim Motions in VSCode with the Vim Extension in a
+                            couple of
+                            days. Then, I stayed up from midnight to 7 am making my own <a
+                                href="https://github.com/Lomzem/NvimConfig">Neovim Config</a>, which has grown in
+                            complexity over the months.</p>
+                    </div>
+                </div>
+                <div class="cult-item" id="arch">
+                    <img src="assets/arch-icon.svg" class="cult-img">
+                    <div class="cult-info">
+                        <h2 id="arch-title" class="title">Arch Linux</h2>
+                        <p class="cult-desc">I learned about Arch Linux through all of the memes on programming
+                            YouTubers' channels. I fell through the Ubuntu WSL to Arch Linux pipeline, and I haven't
+                            gone back since (at least for programming). I learned a ton about linux tools from <a
+                                href="https://www.youtube.com/@LukeSmithxyz">Luke Smith</a>.</p>
+                    </div>
+                </div>
+                </ul>
+            </div>
+    </main>
+</body>
+
+</html>
