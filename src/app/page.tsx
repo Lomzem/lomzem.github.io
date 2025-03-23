@@ -9,7 +9,7 @@ export default function Home() {
         height={200}
         className="rounded-2xl"
       />
-      <p className="text-xl">
+      <p className="text-xl text-center">
         I&apos;m a computer science student at the CSU Chico!
       </p>
     </div>
