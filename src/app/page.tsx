@@ -1,10 +1,17 @@
 export default function Home() {
   return (
-    <main className="flex flex-col gap-2 justify-center items-center p-24 h-full">
+    <div className="flex flex-col gap-4 items-center p-16">
       <h1 className="text-4xl">Hi! I&apos;m Lawjay!</h1>
-      <p className="text-lg">
+      <img
+        src="profile_pic.jpeg"
+        alt="Lawjay"
+        width={200}
+        height={200}
+        className="rounded-2xl"
+      />
+      <p className="text-xl">
         I&apos;m a computer science student at the CSU Chico!
       </p>
-    </main>
+    </div>
   );
 }

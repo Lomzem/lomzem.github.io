@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNav />
-        {children}
+        <main className="h-dvh w-dvw">
+          <TopNav />
+          {children}
+        </main>
       </body>
     </html>
   );
