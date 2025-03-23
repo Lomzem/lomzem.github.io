@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      eslint-plugin-react-hooks:
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@9.23.0(jiti@2.4.2))
       lucide-react:
         specifier: ^0.483.0
         version: 0.483.0(react@19.0.0)
