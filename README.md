@@ -1,42 +1,43 @@
-# sv
+# lomzem.github.io
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Personal site built with SvelteKit and deployed to GitHub Pages.
 
-## Creating a project
+## Development
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
+Use the Bun version specified in `package.json`.
 
 ```sh
-# recreate this project
-bun x sv@0.17.0 create --template minimal --types ts --add prettier eslint playwright tailwindcss="plugins:none" sveltekit-adapter="adapter:static" ai-tools="ide:other" --install bun ./
+bun install --frozen-lockfile
+bun run dev
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Checks
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run lint
+bun run check
+bunx playwright install --with-deps chromium
+bun run test
 ```
 
-## Building
+The browser tests build the site and start a preview server. In CI, the workflow
+builds the site before running the tests.
 
-To create a production version of your app:
+## Build and deploy
 
 ```sh
-npm run build
+bun run build
+bun run preview
 ```
 
-You can preview the production build with `npm run preview`.
+The static build goes into `build/`. Routes are prerendered with trailing slashes
+so GitHub Pages can serve each route from its own `index.html`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The [CI workflow](.github/workflows/ci.yml) runs formatting, lint, type checks,
+a production build, and browser tests on pull requests and pushes to `main`.
+Successful runs on `main` deploy to <https://lomzem.github.io/>. You can also run
+the workflow manually from the Actions tab. Only runs on `main` can deploy.
+
+The workflow uses GitHub's Pages actions and the `github-pages` environment.
+The repository's Pages source must be set to **GitHub Actions**. No deployment
+secret is needed.
