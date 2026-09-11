@@ -199,7 +199,7 @@
 		@apply font-sans;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply min-h-svh bg-background text-foreground;
 		letter-spacing: var(--tracking-normal);
 	}
 }
