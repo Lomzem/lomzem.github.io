@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ThemeToggle from '$lib/components/theme-toggle.svelte';
+	import * as Avatar from '$lib/components/ui/avatar/index.js';
 
 	const projects = [
 		{ name: 'dotfiles', description: 'My Linux configuration files.' },
@@ -19,6 +20,21 @@
 
 <main class="mx-auto max-w-xl px-6 pt-16 pb-12 sm:pt-24">
 	<header>
+		<a
+			href="https://github.com/Lomzem"
+			class="mb-6 inline-flex items-center gap-3 rounded-sm text-sm underline-offset-4 hover:text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+		>
+			<Avatar.Root class="size-12">
+				<Avatar.Image
+					src="https://avatars.githubusercontent.com/u/36811841?v=4&s=96"
+					alt=""
+					width={48}
+					height={48}
+				/>
+				<Avatar.Fallback aria-hidden="true">L</Avatar.Fallback>
+			</Avatar.Root>
+			<span class="font-mono">@Lomzem</span>
+		</a>
 		<div class="flex items-start justify-between gap-4">
 			<h1 class="pt-1 text-2xl leading-tight font-medium tracking-tight">
 				Hello, my name is Lawjay!
